@@ -25,9 +25,8 @@ class CartPage extends StatelessWidget {
                         .toList(),
                   )),
             ),
-            Container(
-                child: Obx(() => MyButton(
-                    onTap: () {}, text: "Checkout ${cartController.total}"))),
+            Obx(() => MyButton(
+                onTap: () {}, text: "Checkout ${cartController.total}")),
           ],
         ),
       ),
@@ -69,3 +68,5 @@ class CartPage extends StatelessWidget {
         ));
   }
 }
+
+

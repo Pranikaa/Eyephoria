@@ -23,7 +23,6 @@ class BuyTab1 extends StatelessWidget {
       //     )
       //   ],
       // ),
-
        body: SafeArea(
         child: Column(
                  crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,10 +61,9 @@ class BuyTab1 extends StatelessWidget {
             ),
                       ), 
                   ],),
-                         
-                         
+                
 
-                          Row(
+                Row(
                        children:  [
                         Padding(
                 padding: const EdgeInsets.all(12.0),
@@ -291,7 +289,6 @@ class BuyTab1 extends StatelessWidget {
             ),
                  ],
         ),
-
         ),
     );
   }
@@ -302,4 +299,3 @@ class BuyTab1 extends StatelessWidget {
       //            .map((Product product) => ProductComponent(product: product))
       //            .toList(),
       //      )), 
-

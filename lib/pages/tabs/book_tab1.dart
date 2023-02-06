@@ -170,7 +170,7 @@ class _BookTab1State extends State<BookTab1> {
                ),
                 softWrap: false,
                 ),
-                ),                     
+                ),           
         ],),
       ),
        )

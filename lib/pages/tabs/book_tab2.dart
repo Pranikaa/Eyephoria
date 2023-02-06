@@ -63,7 +63,7 @@ class _BookTab2State extends State<BookTab2> {
                          Row(
                        children: [
                          Padding(
-                           padding: const EdgeInsets.only(left: 20.0),
+                           padding: const EdgeInsets.only(left: 30.0),
                            child: Image.asset(
                              "assets/images/doctor.jpg",
                              height: 100,
@@ -71,7 +71,7 @@ class _BookTab2State extends State<BookTab2> {
                            ),
                          ),
                                Padding(
-                                 padding: const EdgeInsets.all(19.0),
+                                 padding: const EdgeInsets.all(15.0),
                                  child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                    children: const [                                     
@@ -112,7 +112,7 @@ class _BookTab2State extends State<BookTab2> {
                      ),
                        
                      const Padding(
-                       padding: EdgeInsets.all(40.0),
+                       padding: EdgeInsets.all(30.0),
                        child: Text(
                         'Choose Time',
                         style: TextStyle(
@@ -196,7 +196,7 @@ class _BookTab2State extends State<BookTab2> {
                             },
                           ),
                           const SizedBox(width: 10.0,),
-                          const Text("2:00 PM"),
+                          const Text("2:30 PM"),
                           ],
                           ),
                         ),
@@ -215,29 +215,11 @@ class _BookTab2State extends State<BookTab2> {
                             },
                           ),
                           const SizedBox(width: 10.0,),
-                          const Text("3:30 PM"),
+                          const Text("4:15 PM"),
                           ],
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 120.0),
-                          child: Row(
-                          children:[
-                          Radio(
-                            value: 6,
-                            groupValue: _value,
-                            onChanged: (_){
-                              setState((){
-                                _value=6;
-                                }
-                              );
-                            },
-                          ),
-                          const SizedBox(width: 10.0,),
-                          const Text("4:30 PM"),
-                          ],
-                          ),
-                        ),
+                        
           //check box
           // CheckboxListTile(
           //  secondary: const Icon(Icons.alarm),  
@@ -252,8 +234,8 @@ class _BookTab2State extends State<BookTab2> {
            Padding(
              padding: const EdgeInsets.all(20.0),
              child: Row(
-               children: const [
-                  Padding(
+               children: [
+                  const Padding(
                    padding: EdgeInsets.only(left: 70.0),
                    child: Text('Book',
                         style: TextStyle(
@@ -265,28 +247,64 @@ class _BookTab2State extends State<BookTab2> {
                         softWrap: false,
                         ),   
                  ),
-                 Padding(
-                   padding:  EdgeInsets.only(left: 60),
-                     child: Text('Cancel',
-                         style: TextStyle(
-                         fontFamily: 'Segoe UI',
-                         fontSize: 28,
-                         color:  Color(0xff2462b7),
-                         fontWeight: FontWeight.w700,
+                //  const Padding(
+                //    padding:  EdgeInsets.only(left: 50),
+                //      child: Text('Cancel',
+                //          style: TextStyle(
+                //          fontFamily: 'Segoe UI',
+                //          fontSize: 28,
+                //          color:  Color(0xff2462b7),
+                //          fontWeight: FontWeight.w700,
+                //         ),
+                //          softWrap: false,
+                //          ),
+                //  ),
+                //for cancellation for appoinment button
+                  Padding(
+                    padding: const EdgeInsets.only(left: 50.0),
+                    child: TextButton(
+                      onPressed: () => showDialog<String>(
+                        context: context,
+                        builder: (BuildContext context) => AlertDialog(
+                          title: const Text('Appointment Cancellation'),
+                          content: const Text('Are you sure you want to cancel your appointment?'),
+                          backgroundColor: const Color.fromARGB(255, 183, 232, 253),
+                          actions: <Widget>[
+                            TextButton(
+                              onPressed: () => Navigator.pop(context, 'Cancel'),
+                              child: const Text('Cancel'),
+                            ),
+                            TextButton(
+                              onPressed: () => Navigator.pop(context, 'Confirm'),
+                              child: const Text('Confirm'),
+                            ),
+                          ],
                         ),
-                         softWrap: false,
-                         ),
-                 ),
+                      ),
+                    child: const Text('Cancel',
+                           style: TextStyle(
+                           fontFamily: 'Segoe UI',
+                           fontSize: 28,
+                           color:  Color(0xff2462b7),
+                           fontWeight: FontWeight.w700,
+                          ),
+                           softWrap: false,
+                           ),
+                    ),
+                  ), 
+
+
                ],
              ),
-           ),   
-        ],       
+           ), 
+         ],                        
         ),
-      ),
+       ),
       )
     );          
   }
 }
+
 
 //  Image.asset(
                         //    "assets/images/icons/Icon_awesome-glasses.svg",
