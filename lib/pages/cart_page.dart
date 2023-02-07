@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 
 class CartPage extends StatelessWidget {
   final CartController cartController = Get.find<CartController>();
-  CartPage({Key? key}) : super(key: key);
+  CartPage({Key? key, required List children}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,8 @@ class CartPage extends StatelessWidget {
                   )),
             ),
             Obx(() => MyButton(
-                onTap: () {}, text: "Checkout ${cartController.total}")),
+              
+                onTap: () {}, text: "Checkout ${cartController.total}", backgroundColor: [],)),
           ],
         ),
       ),

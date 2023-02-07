@@ -96,7 +96,7 @@ class SignInPage extends StatelessWidget {
                     };
                     authentication.SignUp(data);
                   }
-                }),
+                }, backgroundColor: [],),
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text("Already have an account?"),

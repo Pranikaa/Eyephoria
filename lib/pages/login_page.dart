@@ -92,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                       authentication.login(data);
                       //Get.to(HomePage());
                     }
-                  }),
+                  }, backgroundColor: [],),
                   const Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text("Forgot Password?",

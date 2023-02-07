@@ -47,20 +47,21 @@ class BuyTab1 extends StatelessWidget {
                            softWrap: false,
                         ),
                       ), 
+
                       // cart icon
                       Container(
                          padding: const EdgeInsets.only(left: 25),
-            child: InkWell(
-              onTap: () => Get.to(() => CartPage()),
-              child: Badge(
-                badgeContent:
-                    Obx(() => Text(cartController.cart.length.toString())),
-                child: const
-                 Icon(Icons.shopping_cart),
-              ),
-            ),
-                      ), 
-                  ],),
+                      child: InkWell(
+                        onTap: () => Get.to(() => CartPage(children: const [],)),
+                        child: Badge(
+                          badgeContent:
+                              Obx(() => Text(cartController.cart.length.toString())),
+                          child: const
+                          Icon(Icons.shopping_cart),
+                        ),
+                      ),
+                                ), 
+                            ],),
                 
 
                 Row(

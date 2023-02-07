@@ -1,6 +1,7 @@
 import 'dart:async';
 //import 'package:eyephoria_pranika_fyp/controller/authentication_controller.dart';
 //import 'package:eyephoria_pranika_fyp/pages/loader.dart';
+import 'package:eyephoria_pranika_fyp/pages/cart_page.dart';
 import 'package:eyephoria_pranika_fyp/pages/tabs/buy_tab1.dart';
 import 'package:eyephoria_pranika_fyp/pages/tabs/first_tab.dart';
 import 'package:eyephoria_pranika_fyp/pages/tabs/profile_tab.dart';
@@ -37,7 +38,7 @@ class _HomePageState extends State<HomePage> {
       return const BookTab1();
     },
     AppTab.cart: () {
-      return Column(
+      return CartPage(
         children: const [],
       );
     },

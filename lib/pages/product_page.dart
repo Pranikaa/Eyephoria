@@ -36,7 +36,7 @@ class ProductPage extends StatelessWidget {
                   onTap: () {
                     Get.bottomSheet(AddToCartBottomSheet(product: product));
                   },
-                  text: "Add To Cart")
+                  text: "Add To Cart", backgroundColor: [],)
             ],
           ),
         ));
