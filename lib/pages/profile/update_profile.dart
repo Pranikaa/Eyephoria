@@ -26,19 +26,23 @@ class UpdateProfilePage extends StatelessWidget {
         leading: IconButton(
           onPressed:()=>Get.back,
           icon: const Icon(Icons.arrow_back_ios,
-          color: Colors.black,),),
+          color: Colors.white,),),
         title:  const Padding(
           padding: EdgeInsets.only(left: 75),
-          child: Text("Edit Profile",
-            style: TextStyle(
-              fontSize: 20,
-              color: primaryColor,
-              fontWeight: FontWeight.bold
-            ),),
+           child: Text(
+                        'Edit Profile',
+                           style: TextStyle(
+                           fontFamily: 'Segoe UI',
+                           fontSize: 24,
+                           color: Colors.white,
+                           fontWeight: FontWeight.w700,
+                        ),
+                           softWrap: false,
+                        ),),
         ),
         
-        backgroundColor: Colors.white,
-      ),
+       // backgroundColor: Colors.white,
+      
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(8),
@@ -50,7 +54,10 @@ class UpdateProfilePage extends StatelessWidget {
                       width: 120,
                       height: 120,
                       child: ClipRRect(borderRadius: BorderRadius.circular(100),
-                      child:const Icon( Icons.person) ),
+                      child:const Icon( 
+                        Icons.person, 
+                        color: Colors.blue,
+                        size: 45,)),
                     ),
                     Positioned(
                       bottom: 0,
@@ -60,12 +67,13 @@ class UpdateProfilePage extends StatelessWidget {
                         height: 35,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
-                          color:primaryColor,
+                          color:Colors.blue,
                         ),
                         child: const Icon(
                           Icons.camera_alt_outlined,
                           size: 18,
-                          color: Colors.white,),
+                          color: Colors.white,
+                          ),
                       ),
                     ),
                   ],
@@ -78,7 +86,8 @@ class UpdateProfilePage extends StatelessWidget {
                     controller: nameController,
                     myValidator: (value)=>null ,
                     prefixIcon: const Icon(
-                      Icons.person_outline_rounded
+                      Icons.person_outline_rounded,
+                      color: Colors.blue,
                     ),
                     //decoration:const InputDecoration(label: Text("FullName"),prefixIcon: Icon(Icons.person_outline)),
 
@@ -101,7 +110,8 @@ class UpdateProfilePage extends StatelessWidget {
                     ),
                     ),
                     MyButton(onTap: (){},
-                    text: "Save", backgroundColor: [],)
+                    text: "Save", backgroundColor: const [Colors.blueAccent], 
+                    ),
                   ],
                 ))
              ],

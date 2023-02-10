@@ -89,30 +89,29 @@ class ProfileTab extends StatelessWidget {
             ),
                ),
             //for profile name
-                          const Padding(
-                               padding: EdgeInsets.all(0.0),
-                               child: Center(
-                                 child: Text(
-                                    '   Name ',
-                                    style: TextStyle(
-                                      fontFamily: 'Segoe UI',
-                                      fontSize: 22,
-                                      color:  Color(0xff000000),
-                                      fontWeight: FontWeight.w700,
-                                    ),
-                                    softWrap: false,
-                        ),
-                               ),
+                  const Padding(
+                    padding: EdgeInsets.all(0.0),
+                    child: Center(
+                      child: Text(
+                      '   Name ',
+                      style: TextStyle(
+                      fontFamily: 'Segoe UI',
+                      fontSize: 22,
+                      color:  Color(0xff000000),
+                      fontWeight: FontWeight.w700,
                       ),
+                      softWrap: false,
+                      ),
+                    ),
+                  ),
 
-                          //edit profile
-                          const SizedBox(height: 20,),
-          
+            //edit profile
+            const SizedBox(height: 20,),         
               Center(
                 child: SizedBox(
                   width: 140,
                   child: ElevatedButton(
-                    onPressed: () => UpdateProfilePage(key: key), 
+                    onPressed:()=>Get.to(UpdateProfilePage()), 
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
                     side: BorderSide.none,
