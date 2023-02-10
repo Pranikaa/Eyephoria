@@ -1,8 +1,10 @@
 import 'package:eyephoria_pranika_fyp/controller/authentication_controller.dart';
 import 'package:eyephoria_pranika_fyp/controller/cart_controller.dart';
 import 'package:eyephoria_pranika_fyp/controller/category_controller.dart';
+import 'package:eyephoria_pranika_fyp/pages/cart_page.dart';
 import 'package:eyephoria_pranika_fyp/pages/home_page.dart';
 import 'package:eyephoria_pranika_fyp/pages/loader.dart';
+import 'package:eyephoria_pranika_fyp/pages/product_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

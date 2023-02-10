@@ -5,12 +5,13 @@ class MyField extends StatelessWidget {
   final String text;
   final bool obscureText;
   final Function? myValidator;
+  final Icon? prefixIcon;
   const MyField(
       {Key? key,
       required this.controller,
       this.text = "Email",
       this.myValidator,
-      this.obscureText = false})
+      this.obscureText = false, this.prefixIcon})
       : super(key: key);
 
   @override

@@ -55,69 +55,75 @@ class ProfileTab extends StatelessWidget {
                         ),
                          ],),
                
-               Stack(
+               Center(
+                 child: Stack(
               children: [
-                SizedBox(
-                  width: 120,
-                  height: 120,
-                  child: ClipRRect(borderRadius: BorderRadius.circular(100),
-                  child:Image.asset(
-                            "assets/images/profile.png",
-                            height: 70,
-                            width: 70,
-                          
-                  ) ),
-                ),
-                Positioned(
-                  bottom: 8,
-                  right: 8,
-                  child: Container(
-                    width: 35,
-                    height: 35,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      color:Colors.lightBlue,
-                    ),
-                    child: const Icon(
-                      Icons.create,
-                      size: 19,
-                      color: Colors.white,),
+                  SizedBox(
+                    width: 120,
+                    height: 120,
+                    child: ClipRRect(borderRadius: BorderRadius.circular(100),
+                    child:Image.asset(
+                              "assets/images/profile.png",
+                              height: 70,
+                              width: 70,
+                            
+                    ) ),
                   ),
-                ),
+                  Positioned(
+                    bottom: 8,
+                    right: 8,
+                    child: Container(
+                      width: 35,
+                      height: 35,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        color:Colors.lightBlue,
+                      ),
+                      child: const Icon(
+                        Icons.create,
+                        size: 19,
+                        color: Colors.white,),
+                    ),
+                  ),
               ], 
             ),
+               ),
             //for profile name
                           const Padding(
-                               padding: EdgeInsets.all(5.0),
-                               child: Text(
-                                  '   Name ',
-                                  style: TextStyle(
-                                    fontFamily: 'Segoe UI',
-                                    fontSize: 22,
-                                    color:  Color(0xff000000),
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                  softWrap: false,
+                               padding: EdgeInsets.all(0.0),
+                               child: Center(
+                                 child: Text(
+                                    '   Name ',
+                                    style: TextStyle(
+                                      fontFamily: 'Segoe UI',
+                                      fontSize: 22,
+                                      color:  Color(0xff000000),
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                    softWrap: false,
                         ),
+                               ),
                       ),
 
                           //edit profile
                           const SizedBox(height: 20,),
           
-              SizedBox(
-                width: 140,
-                child: ElevatedButton(
-                  onPressed: () => UpdateProfilePage(key: key), 
-                style: ElevatedButton.styleFrom(
-                  //backgroundColor: Colors.blue,
-                  side: BorderSide.none,
-                  shape: const StadiumBorder()
-                ),
-                child: const Text("Edit Profile",
-                style: TextStyle(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontSize: 18,
-                )),
+              Center(
+                child: SizedBox(
+                  width: 140,
+                  child: ElevatedButton(
+                    onPressed: () => UpdateProfilePage(key: key), 
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    side: BorderSide.none,
+                    shape: const StadiumBorder()
+                  ),
+                  child: const Text("Edit Profile",
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontSize: 18,
+                  )),
+                  ),
                 ),
               ),
             
@@ -140,9 +146,7 @@ class ProfileTab extends StatelessWidget {
            
             Center(child: ElevatedButton(onPressed: ()=>logout(),
                      child:
-                     const Text("Logout")), ),      
-                         
-                      
+                     const Text("Logout")), ),       
                       //     Row(
                       //       // ignore: prefer_const_literals_to_create_immutables
                       //       children: [
@@ -160,9 +164,6 @@ class ProfileTab extends StatelessWidget {
                       // ),
                       //       ],
                       //     ),  
-                      //for contact
-                      // ignore: prefer_const_constructors
-
                  ],  
                ),
             ),

@@ -1,4 +1,5 @@
 
+import 'package:eyephoria_pranika_fyp/components/my_button.dart';
 import 'package:eyephoria_pranika_fyp/components/my_field.dart';
 import 'package:eyephoria_pranika_fyp/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -76,20 +77,31 @@ class UpdateProfilePage extends StatelessWidget {
                     text: "Name",
                     controller: nameController,
                     myValidator: (value)=>null ,
+                    prefixIcon: const Icon(
+                      Icons.person_outline_rounded
+                    ),
                     //decoration:const InputDecoration(label: Text("FullName"),prefixIcon: Icon(Icons.person_outline)),
 
                     ),
                     MyField(
                     text: "Phone Number",
                     controller: phoneController,
-                    myValidator: (value)=>null 
+                    myValidator: (value)=>null,
+                    prefixIcon: const Icon(
+                      Icons.email_outlined
+                    ), 
                     ),
                     MyField(
                     text: "Password",
                     obscureText: true,
                     controller: passwordController,
-                    myValidator: (value)=>null 
+                    myValidator: (value)=>null,
+                    prefixIcon: const Icon(
+                      Icons.key_outlined
                     ),
+                    ),
+                    MyButton(onTap: (){},
+                    text: "Save", backgroundColor: [],)
                   ],
                 ))
              ],

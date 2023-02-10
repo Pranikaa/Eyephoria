@@ -2,7 +2,6 @@ import 'package:eyephoria_pranika_fyp/components/my_button.dart';
 import 'package:eyephoria_pranika_fyp/components/my_field.dart';
 import 'package:eyephoria_pranika_fyp/controller/authentication_controller.dart';
 import 'package:eyephoria_pranika_fyp/pages/signin_page.dart';
-import 'package:eyephoria_pranika_fyp/utils/shared_preds.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -67,6 +66,7 @@ class _LoginPageState extends State<LoginPage> {
                           color: Colors.black)),
                   MyField(
                     controller: emailController,
+                    prefixIcon: const Icon(Icons.email_outlined),
                     myValidator: (value) {
                       if (!value.toString().contains("@")) {
                         return "Email is not valid";
@@ -78,6 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                     text: "Password",
                     obscureText: true,
                     controller: passwordController,
+                    prefixIcon: const Icon(Icons.key_outlined),
                     myValidator: (value) {
                       return null;
                     },
