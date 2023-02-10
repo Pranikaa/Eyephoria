@@ -13,7 +13,7 @@ class CartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Cart")),
+      appBar: AppBar(title: const Text("    Cart")),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -26,7 +26,7 @@ class CartPage extends StatelessWidget {
                   )),
             ),
             Obx(() => MyButton(
-              
+
                 onTap: () {}, text: "Checkout ${cartController.total}", backgroundColor: [],)),
           ],
         ),

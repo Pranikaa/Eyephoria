@@ -4,14 +4,15 @@ class MyField extends StatelessWidget {
   final TextEditingController controller;
   final String text;
   final bool obscureText;
-  final Function? myValidator;
+  final Function? myValidator;  
   final Icon? prefixIcon;
+  
   const MyField(
       {Key? key,
       required this.controller,
       this.text = "Email",
       this.myValidator,
-      this.obscureText = false, this.prefixIcon})
+      this.obscureText = false, this.prefixIcon, })
       : super(key: key);
 
   @override
@@ -23,8 +24,11 @@ class MyField extends StatelessWidget {
         obscureText: obscureText,
         decoration: InputDecoration(
           labelText: 'Enter your $text',
-          border: const OutlineInputBorder(),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(100,)),
+            prefixIcon: prefixIcon,
         ),
+
         validator: (value) {
           // return null;
           if (value!.isEmpty) {

@@ -1,7 +1,6 @@
 
 import 'package:eyephoria_pranika_fyp/components/my_button.dart';
 import 'package:eyephoria_pranika_fyp/components/my_field.dart';
-import 'package:eyephoria_pranika_fyp/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -23,22 +22,22 @@ class UpdateProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed:()=>Get.back,
-          icon: const Icon(Icons.arrow_back_ios,
-          color: Colors.white,),),
+        // leading: IconButton(
+        //   onPressed:()=>Get.back,
+        //   icon: const Icon(Icons.arrow_back_ios,
+        //   color: Colors.white,),),
         title:  const Padding(
           padding: EdgeInsets.only(left: 75),
            child: Text(
-                        'Edit Profile',
-                           style: TextStyle(
-                           fontFamily: 'Segoe UI',
-                           fontSize: 24,
-                           color: Colors.white,
-                           fontWeight: FontWeight.w700,
-                        ),
-                           softWrap: false,
-                        ),),
+             'Edit Profile',
+            style: TextStyle(
+            fontFamily: 'Segoe UI',
+            fontSize: 24,
+            color: Colors.white,
+            fontWeight: FontWeight.w700,
+          ),
+            softWrap: false,
+          ),),
         ),
         
        // backgroundColor: Colors.white,
