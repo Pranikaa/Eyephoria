@@ -11,6 +11,7 @@ class CartController extends GetxController {
   var total = 0.0.obs;
   final storage = LocalStorage('cart');
 
+
   @override
   void onInit() {
     super.onInit();

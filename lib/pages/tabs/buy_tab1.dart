@@ -1,9 +1,9 @@
-import 'package:badges/badges.dart';
 import 'package:eyephoria_pranika_fyp/controller/cart_controller.dart';
 import 'package:eyephoria_pranika_fyp/controller/product_controller.dart';
 import 'package:eyephoria_pranika_fyp/pages/cart_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:badges/badges.dart';
 
 class BuyTab1 extends StatelessWidget {
 
@@ -15,6 +15,7 @@ class BuyTab1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+  
     return Scaffold(
       // appBar: AppBar(
       //   title: const Text("Welcome To Eyephoria"),
@@ -53,7 +54,7 @@ class BuyTab1 extends StatelessWidget {
                          padding: const EdgeInsets.only(left: 25),
                       child: InkWell(
                         onTap: () => Get.to(() => CartPage(children: const [],)),
-                        child: Badge(
+                        child: badge(
                           badgeContent:
                               Obx(() => Text(cartController.cart.length.toString())),
                           child: const
@@ -96,11 +97,11 @@ class BuyTab1 extends StatelessWidget {
                       width: 100,
                 ),
               ),      
-                               Padding(
-                                 padding: const EdgeInsets.all(19.0),
+                              const Padding(
+                                 padding:  EdgeInsets.all(19.0),
                                  child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                   children: const [                                     
+                                   children: [                                     
                                     Text(
                                       'Product Name: Glasses',
                                       style: TextStyle(
@@ -171,11 +172,11 @@ class BuyTab1 extends StatelessWidget {
                       width: 100,
                 ),
               ),      
-                               Padding(
-                                 padding: const EdgeInsets.all(19.0),
+                               const Padding(
+                                 padding:  EdgeInsets.all(19.0),
                                  child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                   children: const [                                     
+                                   children:  [                                     
                                     Text(
                                       'Glasses',
                                       style: TextStyle(
@@ -293,6 +294,8 @@ class BuyTab1 extends StatelessWidget {
         ),
     );
   }
+  
+  badge({required Obx badgeContent, required Icon child}) {}
 }
 
 //  Obx(() => Wrap(

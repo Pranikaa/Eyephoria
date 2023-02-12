@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:khalti/khalti.dart';
 import 'package:url_launcher/url_launcher.dart' as url_launcher;
 
-class KhaltiApp extends StatefulWidget {
-  const KhaltiApp({Key? key}) : super(key: key);
+class KhaltiPage extends StatefulWidget {
+  const KhaltiPage({Key? key}) : super(key: key);
 
   @override
-  State<KhaltiApp> createState() => _KhaltiAppState();
+  State<KhaltiPage> createState() => _KhaltiPageState();
 }
 
-class _KhaltiAppState extends State<KhaltiApp> {
+class _KhaltiPageState extends State<KhaltiPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
