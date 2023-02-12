@@ -116,9 +116,9 @@ class _WalletPaymentState extends State<WalletPayment> {
                       ),
                       onChanged: (v) => otp = v,
                     ),
-                    actions: [
+                    actions:  [
                       SimpleDialogOption(
-                        child: const Text('Submit'),
+                        child: Text('Submit'),
                         onPressed: () => Navigator.pop(context, otp),
                       )
                     ],

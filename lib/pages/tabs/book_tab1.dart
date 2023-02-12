@@ -79,11 +79,11 @@ class _BookTab1State extends State<BookTab1> {
                              width: 100,
                            ),
                          ),
-                               Padding(
-                                 padding: const EdgeInsets.all(19.0),
+                               const Padding(
+                                 padding: EdgeInsets.all(19.0),
                                  child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                   children: const [                                     
+                                   children: [                                     
                                     Text(
                                       'Dr. Pragya Oli',
                                       style: TextStyle(

@@ -46,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Form(
@@ -94,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
                       authentication.login(data);
                       Get.to(const HomePage());
                     }
-                  }, backgroundColor: [],),
+                  }, backgroundColor: const [],),
                   const Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text("Forgot Password?",

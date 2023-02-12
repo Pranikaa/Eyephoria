@@ -2,6 +2,7 @@
 
 import 'package:eyephoria_pranika_fyp/controller/cart_controller.dart';
 import 'package:eyephoria_pranika_fyp/controller/product_controller.dart';
+import 'package:eyephoria_pranika_fyp/payments/khalti.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -70,11 +71,11 @@ class _BookTab2State extends State<BookTab2> {
                              width: 100,
                            ),
                          ),
-                               Padding(
-                                 padding: const EdgeInsets.all(15.0),
+                               const Padding(
+                                 padding: EdgeInsets.all(15.0),
                                  child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                   children: const [                                     
+                                   children: [                                     
                                     Text(
                                       'Dr. Pragya Oli',
                                       style: TextStyle(
@@ -235,17 +236,32 @@ class _BookTab2State extends State<BookTab2> {
              padding: const EdgeInsets.all(20.0),
              child: Row(
                children: [
-                  const Padding(
-                   padding: EdgeInsets.only(left: 70.0),
-                   child: Text('Book',
-                        style: TextStyle(
-                        fontFamily: 'Segoe UI',
-                        fontSize: 28,
-                        color:  Color(0xff2462b7),
-                        fontWeight: FontWeight.w700,
-                       ),
-                        softWrap: false,
-                        ),   
+                //   const Padding(
+                //    padding: EdgeInsets.only(left: 70.0),
+                //    child: Text('Book',
+                //         style: TextStyle(
+                //         fontFamily: 'Segoe UI',
+                //         fontSize: 28,
+                //         color:  Color(0xff2462b7),
+                //         fontWeight: FontWeight.w700,
+                //        ),
+                //         softWrap: false,
+                //         ), 
+                //  ),
+                 Padding(
+                   padding: const EdgeInsets.only(left: 70.0),
+                   child: InkWell(
+                      onTap: () => Get.to(()=> KhaltiPage()),
+                      child: const Text('Book',
+                                 style: TextStyle(
+                                 fontFamily: 'Segoe UI',
+                                 fontSize: 28,
+                                 color:  Color(0xff2462b7),
+                                 fontWeight: FontWeight.w700,
+                                ),
+                                 softWrap: false,
+                                 ),
+                                 ),
                  ),
                 //  const Padding(
                 //    padding:  EdgeInsets.only(left: 50),

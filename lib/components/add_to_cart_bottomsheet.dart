@@ -41,7 +41,7 @@ class AddToCartBottomSheet extends StatelessWidget {
               onTap: () {
                 cartController.add(product);
               },
-              text: "Add To Cart", backgroundColor:[],)
+              text: "Add To Cart", backgroundColor:const [],)
         ],
       ),
     );

@@ -103,7 +103,7 @@ class SignInPage extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Get.to(LoginPage());
+                    Get.to(const LoginPage());
                   },
                   child: const Text("Login",
                       style: TextStyle(

@@ -27,7 +27,7 @@ class CartPage extends StatelessWidget {
             ),
             Obx(() => MyButton(
 
-                onTap: () {}, text: "Checkout ${cartController.total}", backgroundColor: [],)),
+                onTap: () {}, text: "Checkout ${cartController.total}", backgroundColor: const [],)),
           ],
         ),
       ),
