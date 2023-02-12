@@ -1,6 +1,7 @@
 import 'package:eyephoria_pranika_fyp/components/my_button.dart';
 import 'package:eyephoria_pranika_fyp/components/my_field.dart';
 import 'package:eyephoria_pranika_fyp/controller/authentication_controller.dart';
+import 'package:eyephoria_pranika_fyp/pages/home_page.dart';
 import 'package:eyephoria_pranika_fyp/pages/signin_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -91,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                         "password": passwordController.text,
                       };
                       authentication.login(data);
-                      //Get.to(HomePage());
+                      Get.to(const HomePage());
                     }
                   }, backgroundColor: [],),
                   const Padding(
