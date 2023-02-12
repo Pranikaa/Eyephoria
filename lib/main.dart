@@ -11,23 +11,18 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Khalti.init(
     publicKey: 'test_public_key_781201cbfd7644f2923c26f52aaf6564',
-  enabledDebugging: false
+    enabledDebugging: false
   );
-  Builder: (context, navigatorKey){
-    navigatorKey;
-      supportedLocales: const [
-        Locale('en', 'US'),
-        Locale('ne', 'NP'),
-      ];
+  // Builder: (context, navigatorKey){
+  //   navigatorKey;
+  //     supportedLocales: const [
+  //       Locale('en', 'US'),
+  //       Locale('ne', 'NP'),
+  //     ];
       // LocalizationsDelegate: const [
       //   KhaltiLocalizations.delegate,
-      // ];
-
-
-      
-  };
-  
-
+      // ];   
+  //};
   
   Get.put(Authentication());
   Get.put(CategoryController());

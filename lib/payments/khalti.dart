@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:khalti/khalti.dart';
 import 'package:url_launcher/url_launcher.dart' as url_launcher;
 
-class KhaltiApp extends StatelessWidget {
+class KhaltiApp extends StatefulWidget {
   const KhaltiApp({Key? key}) : super(key: key);
 
+  @override
+  State<KhaltiApp> createState() => _KhaltiAppState();
+}
+
+class _KhaltiAppState extends State<KhaltiApp> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -85,7 +90,7 @@ class _WalletPaymentState extends State<WalletPayment> {
 
               final initiationModel = await Khalti.service.initiatePayment(
                 request: PaymentInitiationRequestModel(
-                  amount: 10,
+                  amount: 1000,
                   mobile: _mobileController.text,
                   productIdentity: 'mac-mini',
                   productName: 'Apple Mac Mini',
@@ -113,7 +118,7 @@ class _WalletPaymentState extends State<WalletPayment> {
                     ),
                     actions: [
                       SimpleDialogOption(
-                        child: const Text('OK'),
+                        child: const Text('Submit'),
                         onPressed: () => Navigator.pop(context, otp),
                       )
                     ],
@@ -131,6 +136,16 @@ class _WalletPaymentState extends State<WalletPayment> {
                     ),
                   );
 
+                  showDialog(
+                    context: (context), 
+                    builder: (context){
+                    return AlertDialog(
+                      title: const Text('Payment Successful'),
+                      content: Text ('Verification Token: ${model.token}'),
+                    );
+                  }
+                  );
+
                   debugPrint(model.toString());
                 } catch (e) {
                   ScaffoldMessenger.maybeOf(context)?.showSnackBar(
@@ -139,7 +154,7 @@ class _WalletPaymentState extends State<WalletPayment> {
                 }
               }
             },
-            child: const Text('PAY Rs. 10'),
+            child: const Text('Make Payment'),
           ),
         ],
       ),
@@ -205,7 +220,7 @@ class _BankingState extends State<Banking> with AutomaticKeepAliveClientMixin {
                   if (mobile != null) {
                     final url = Khalti.service.buildBankUrl(
                       bankId: bank.idx,
-                      amount: 10,
+                      amount: 1000,
                       mobile: mobile,
                       productIdentity: 'macbook-pro-21',
                       productName: 'Macbook Pro 2021',
