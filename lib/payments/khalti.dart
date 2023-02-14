@@ -81,6 +81,7 @@ class _WalletPaymentState extends State<WalletPayment> {
             decoration: const InputDecoration(
               label: Text('Khalti MPIN'),
             ),
+            obscureText: true,
             controller: _pinController,
           ),
           const SizedBox(height: 24),

@@ -14,7 +14,7 @@ class Authentication extends GetxController {
   final authService = AuthService();
 
   login(data) async {
-    print(data);
+    //print(data);
     var url = Uri.parse(LOGIN_API);
     var response = await http.post(url, body: data);
     if (response.statusCode == 200) {

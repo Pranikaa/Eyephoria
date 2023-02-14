@@ -2,6 +2,7 @@ import 'package:eyephoria_pranika_fyp/controller/authentication_controller.dart'
 import 'package:eyephoria_pranika_fyp/controller/cart_controller.dart';
 import 'package:eyephoria_pranika_fyp/controller/category_controller.dart';
 import 'package:eyephoria_pranika_fyp/pages/home_page.dart';
+import 'package:eyephoria_pranika_fyp/pages/loader.dart';
 import 'package:eyephoria_pranika_fyp/pages/login_page.dart';
 import 'package:eyephoria_pranika_fyp/payments/khalti.dart';
 import 'package:eyephoria_pranika_fyp/payments/khalti_app.dart';
@@ -43,7 +44,7 @@ Future<void> main() async {
       home: GetMaterialApp(
           debugShowCheckedModeBanner: false,
           title: "My First Flutter Project",
-          home: HomePage())));
+          home: Loader())));
           debugShowCheckedModeBanner: false;
           
 }

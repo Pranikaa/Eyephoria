@@ -23,6 +23,7 @@ class _LoaderState extends State<Loader> {
 
   checkifAUthenticated() async {
     //waits for 2 seconds
+    await Future.delayed(const Duration(seconds: 2));
     var token = await authService.getToken();
     if (token != null) {
       Get.offAll(const HomePage());
